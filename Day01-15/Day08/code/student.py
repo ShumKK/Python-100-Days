@@ -23,7 +23,7 @@ class Student(object):
         print('%s正在学习%s.' % (self.name, course_name))
 
     # PEP 8要求标识符的名字用全小写多个单词用下划线连接
-    # 但是很多程序员和公司更倾向于使用驼峰命名法(驼峰标识)
+    # 但是很多程序员和公司更倾向于使用驼峰命名法(驼峰标识, e.g. fisrtName)
     def watch_av(self):
         if self.age < 18:
             print('%s只能观看《熊出没》.' % self.name)

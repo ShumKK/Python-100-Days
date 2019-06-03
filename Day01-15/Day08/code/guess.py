@@ -21,11 +21,11 @@ class GuessMachine(object):
         self._counter = 0
         self._hint = None
 
-    def guess(self, your_answer):
+    def guess(self, answer):
         self._counter += 1
-        if your_answer > self._answer:
+        if answer > self._answer:
             self._hint = '小一点'
-        elif your_answer < self._answer:
+        elif answer < self._answer:
             self._hint = '大一点'
         else:
             self._hint = '恭喜你猜对了'
