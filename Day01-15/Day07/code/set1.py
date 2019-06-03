@@ -18,7 +18,7 @@ def main():
     set2.update([11, 12])
     print(set1)
     print(set2)
-    set2.discard(5)
+    set2.discard(5)  # discard的元素如果不存在不会引发KeyError
     # remove的元素如果不存在会引发KeyError
     if 4 in set2:
         set2.remove(4)

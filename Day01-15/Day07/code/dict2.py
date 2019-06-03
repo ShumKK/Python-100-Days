@@ -19,9 +19,9 @@ def main():
     if 'age' in stu:
         stu['age'] = 20
     print(stu)
-    stu.setdefault('score', 60)
+    stu.setdefault('score', 60)  # update score
     print(stu)
-    stu.setdefault('score', 100)
+    stu.setdefault('score', 100)  # Do not update score
     print(stu)
     stu['score'] = 100
     print(stu)
