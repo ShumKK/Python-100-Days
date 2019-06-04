@@ -14,16 +14,19 @@ import math
 
 class Circle(object):
 
-    def __init__(self, radius):
-        self._radius = radius
+    def __init__(self, r):
+        # The original line
+        # self._radius = r
+        # should be wrong - it creates a new property _radius, so radius.setter does not take place.
+        self.radius = r  # here it uses the radius setter, not assigns a new "radius" property.
 
     @property
     def radius(self):
         return self._radius
 
     @radius.setter
-    def radius(self, radius):
-        self._radius = radius if radius > 0 else 0
+    def radius(self, r):
+        self._radius = r if r > 0 else 0
 
     @property
     def perimeter(self):
@@ -38,5 +41,7 @@ if __name__ == '__main__':
     radius = float(input('请输入游泳池的半径: '))
     small = Circle(radius)
     big = Circle(radius + 3)
+    big.radius = -10
+    print(big.__dict__)
     print('围墙的造价为: ￥%.1f元' % (big.perimeter * 115))
     print('过道的造价为: ￥%.1f元' % ((big.area - small.area) * 65))
