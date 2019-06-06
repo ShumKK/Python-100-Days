@@ -8,17 +8,19 @@ class Pet(object, metaclass=ABCMeta):
 
     @abstractmethod
     def make_voice(self):
-        pass
+        pass  # determined by override
 
 
 class Dog(Pet):
 
+    # override the abstractmethod
     def make_voice(self):
         print('%s: 汪汪汪...' % self._nickname)
 
 
 class Cat(Pet):
 
+    # override the abstractmethod
     def make_voice(self):
         print('%s: 喵...喵...' % self._nickname)
 
