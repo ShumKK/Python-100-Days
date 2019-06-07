@@ -34,7 +34,7 @@ filename = 'teacher.csv'
 teachers = [Teacher('骆昊', 38, '叫兽'), Teacher('狄仁杰', 25, '砖家')]
 
 try:
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding='utf-8') as f:
         writer = csv.writer(f)
         for teacher in teachers:
             writer.writerow([teacher.name, teacher.age, teacher.title])

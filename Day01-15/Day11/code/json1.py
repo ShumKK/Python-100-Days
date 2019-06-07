@@ -7,7 +7,28 @@ Date: 2018-03-13
 """
 
 import json
-import csv2
+
+
+class Teacher(object):
+
+    def __init__(self, name, age, title):
+        self.__name = name
+        self.__age = age
+        self.__title = title
+        self.__index = -1
+
+    @property
+    def name(self):
+        return self.__name
+
+    @property
+    def age(self):
+        return self.__age
+
+    @property
+    def title(self):
+        return self.__title
+
 
 json_str = '{"name": "骆昊", "age": 38, "title": "叫兽"}'
 result = json.loads(json_str)
@@ -17,7 +38,7 @@ print(result['name'])
 print(result['age'])
 
 # 把转换得到的字典作为关键字参数传入Teacher的构造器
-teacher = csv2.Teacher(**result)
+teacher = Teacher(**result)
 print(teacher)
 print(teacher.name)
 print(teacher.age)
